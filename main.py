@@ -3,8 +3,8 @@ AUTHOR : AHMED-ORACLE
 DATE : 09 | 01 |2023
 PROGRAM : A SIMPLE GAME 
 """
-#Accessing the random value
-from random_number import r_num
+#getting the random value
+from random_number import rand_num
 #import random_number 
 import colorama
 import time
@@ -19,12 +19,16 @@ print("•IT'S A SIMPLE "+colorama.Fore.CYAN+"GAME"+colorama.Fore.BLACK)
 print("•WHERE YOU HAVE TO "+colorama.Fore.CYAN+"GUESS THE CORRECT NUMBER"+colorama.Fore.BLACK)
 print("•YOU HAVE "+colorama.Fore.CYAN+"LIMITED CHANCES"+colorama.Fore.BLACK)
 print("•TO GUESS THE "+colorama.Fore.CYAN+"CORRECT NUMBER"+colorama.Fore.BLACK)
+print("•RANDOM NUMBER GENERATED\n•IN BETWEEN "+colorama.Fore.CYAN+"1 TO 100"+colorama.Fore.BLACK)
 print("•TOTAL CHANCES"+colorama.Fore.CYAN+" 7\n"+colorama.Fore.BLACK)
 
 print("TO START THE GAME PLEASE ENTER \n"+colorama.Fore.CYAN+"(EN) FOR ENTER"+colorama.Fore.BLACK+" // "+colorama.Fore.CYAN+"(EX) FOR EXIT\n"+colorama.Fore.RESET)
 start_game = input("=>").upper()
 #print("\n")
 #global guessesLeft
+
+#assigning the rand_num() function's value into r_num
+r_num = rand_num()
 
 if start_game == "EN":
 	totalGuesses = 7
@@ -60,9 +64,9 @@ if start_game == "EN":
 			#break
 	
 elif start_game == "EX":
-	print("\nYOU HAVE ENTERED EXIT")
+	print(colorama.Fore.RED+"\nYOU HAVE ENTERED EXIT")
 else:
-	print("\nYOU HAVE ENTERED WRONG PROMT")
+	print(colorama.Fore.RED+"\nYOU HAVE ENTERED WRONG PROMT")
 
 
 # global totalGuesses 
